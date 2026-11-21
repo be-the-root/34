@@ -1,18 +1,26 @@
 [gd_scene format=3 uid="uid://ckhl3dmc2uxye"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wp5od"]
+[ext_resource type="Script" uid="uid://dn5i7oxvqyqj2" path="res://player/player.gd" id="1_oul6g"]
+[ext_resource type="Script" uid="uid://jotwy7takjc0" path="res://player/fp_cam.gd" id="2_rkbax"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_wp5od"]
 
-[node name="player" type="CharacterBody3D" unique_id=1296198403]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wp5od"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1632892807]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.69016695, 0)
-shape = SubResource("CapsuleShape3D_wp5od")
+[node name="player" type="CharacterBody3D" unique_id=1296198403]
+script = ExtResource("1_oul6g")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=227353553]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.69016695, 0)
 mesh = SubResource("CapsuleMesh_wp5od")
 
-[node name="Node3D" type="Node3D" parent="." unique_id=157093343]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1632892807]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.67801213, 0)
+shape = SubResource("CapsuleShape3D_wp5od")
+
+[node name="head" type="Node3D" parent="." unique_id=157093343]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2019788, 0)
+script = ExtResource("2_rkbax")
+
+[node name="Camera3D" type="Camera3D" parent="head" unique_id=2102640274]
+transform = Transform3D(1, 0, 0, 0, 0.9999997, 0.0007851383, 0, -0.0007851383, 0.9999997, 0, 0.26348877, 0)
