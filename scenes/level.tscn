@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://ctlg2d1b48r4x" path="res://icon.svg" id="1_2q6dc"]
 [ext_resource type="PackedScene" uid="uid://ckhl3dmc2uxye" path="res://player/player.tscn" id="2_w7c3h"]
+[ext_resource type="PackedScene" uid="uid://cuwe7cbo64asg" path="res://Untitled.glb" id="2_w8frs"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vkdpk"]
 albedo_color = Color(1, 1, 1, 0)
@@ -26,6 +27,9 @@ mesh = SubResource("BoxMesh_k56px")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="floor" unique_id=1581569746]
 transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, 0, 0, 0)
 shape = SubResource("BoxShape3D_wp5od")
+
+[node name="Untitled" parent="floor" unique_id=389595900 instance=ExtResource("2_w8frs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.951491, 0.00067004934, 5.218079)
 
 [node name="player" parent="." unique_id=1296198403 instance=ExtResource("2_w7c3h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7602706, 0)
