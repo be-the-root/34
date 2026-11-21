@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://ckhl3dmc2uxye"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wp5od"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_wp5od"]
+
+[node name="player" type="CharacterBody3D" unique_id=1296198403]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1632892807]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.69016695, 0)
+shape = SubResource("CapsuleShape3D_wp5od")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=227353553]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.69016695, 0)
+mesh = SubResource("CapsuleMesh_wp5od")
+
+[node name="Node3D" type="Node3D" parent="." unique_id=157093343]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
